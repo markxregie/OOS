@@ -1,0 +1,143 @@
+.home-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+  
+  .home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .home-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: left;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .home-text h1 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsive text with a flexible size */
+    font-weight: bold;
+    color: #58A8B5;
+    margin-bottom: 1rem;
+  }
+  
+  .home-text .highlight {
+    color: #58A8B5;
+  }
+  
+  .home-text p {
+    font-size: clamp(1rem, 2vw, 1.25rem); /* Responsive paragraph size */
+    color: #636262;
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-btn {
+    background-color: #58A8B5;
+    color: #EBF5F6;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: #5baab8;
+  }
+  
+  .home-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .home-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: rotate(10deg);
+    max-height: 600px; /* Limits tall images */
+    overflow: hidden;
+    margin-left: 7rem;
+  }
+  
+  /* 📱 Responsive Layout */
+  @media (max-width: 1024px) {
+    .home-text {
+      margin-right: 1rem; /* Reduce margin on medium screens */
+    }
+  
+    .home-text h1 {
+      font-size: clamp(3rem, 4vw, 3.5rem); /* Adjust h1 for medium screens */
+    }
+  
+    .home-text p {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+    }
+  
+    .home-image img {
+      margin-left: 0; /* Remove left margin on smaller screens */
+      max-height: 500px; /* Prevent image from getting too large */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-content {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .home-text h1 {
+      font-size: clamp(3rem, 5vw, 3rem); /* Dynamic h1 size for smaller screens */
+    }
+  
+    .home-text p {
+      font-size: clamp(1rem, 3vw, 1rem); /* Responsive paragraph font size */
+    }
+  
+    .order-btn {
+      justify-content: center;
+    }
+  
+    .home-text {
+      margin-right: 0; /* No margin on small screens */
+      margin-bottom: 1.5rem; /* Add some space between sections */
+    }
+  
+    .home-image img {
+      max-height: 400px; /* Further restrict image size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-text h1 {
+      font-size: clamp(3rem, 6vw, 2.5rem); /* Smaller text with flexibility */
+    }
+  
+    .home-text p {
+      font-size: 0.875rem;
+    }
+  
+    .order-btn {
+      font-size: 0.875rem; /* Smaller button text */
+      padding: 0.5rem 1rem; /* Smaller padding */
+    }
+  
+    .home-image img {
+      max-height: 350px; /* Limit image size on very small screens */
+    }
+  }
+  
