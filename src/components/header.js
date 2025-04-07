@@ -4,13 +4,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import navLogo from '../assets/nav.png';
 import cartIcon from '../assets/cart.svg';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 export default function AppHeader() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container className="d-flex align-items-center justify-content-between">
         {/* Left - Logo */}
-        <Navbar.Brand href="#home" className="me-lg-5 me-0">
+        <Navbar.Brand as={Link} to="/" className="me-lg-5 me-0">
           <img
             src={navLogo}
             alt="Bleu Bean Cafe"
@@ -26,7 +27,7 @@ export default function AppHeader() {
           <div className="d-flex flex-column flex-lg-row justify-content-between w-100">
             {/* Center - Navigation links */}
             <Nav className="mx-auto gap-3 nav-center">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link href="#menu">Menu</Nav.Link>
               <Nav.Link href="#about">About Us</Nav.Link>
               <Nav.Link href="#services">Services</Nav.Link>
@@ -38,7 +39,7 @@ export default function AppHeader() {
               <Nav.Link href="#cart" className="me-3">
                 <img src={cartIcon} alt="Cart" className="cart-img" />
               </Nav.Link>
-              <Nav.Link href="#signup">
+              <Nav.Link as={Link} to="/login">
                 <button className="btn btn-outline-primary">Sign In</button>
               </Nav.Link>
               <Nav.Link href="#order-now">
