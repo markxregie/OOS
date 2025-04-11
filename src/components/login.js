@@ -60,7 +60,7 @@ const LoginPage = () => {
             </div>
 
             <div className="forgot-password">
-            <a href="/reset-password"></a>
+            <a href="/forgot-password"></a>
           </div>
             <button type="submit" className="login-button">Log In</button>
           </form>

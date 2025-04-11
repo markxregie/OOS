@@ -2,6 +2,8 @@ import React from 'react';
 import './Home.css';
 import coffeeImage from '../assets/home.png'; // adjust path if needed
 import arrowIcon from '../assets/arrow.svg';
+import wave from '../assets/Wave.svg';
+
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
           <img src={coffeeImage} alt="Iced Coffee" />
         </div>
       </div>
+
+      <img src={wave} alt="Wave design" className="wave-img" />
     </section>
   );
 };

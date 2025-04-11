@@ -1,6 +1,9 @@
 .home-section {
     padding: 2rem 1.5rem 3rem;
+    margin-bottom: 3rem;
   }
+
+
   
   .home-content {
     display: flex;
@@ -74,6 +77,14 @@
     max-height: 1000px; /* Limits tall images */
     overflow: hidden;
     margin-left: 10rem;
+  }
+
+  .wave-img {
+    width: 105%;
+    display: block;
+    margin-top: -8rem; /* optional: overlap a bit */
+    margin-left: -2rem;
+  
   }
   
   /* 📱 Responsive Layout */
