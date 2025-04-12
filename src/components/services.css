@@ -1,0 +1,122 @@
+.services-section {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .services-header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+  
+  .semi-cursive-text {
+    font-family: 'Dancing Script', cursive;  /* Example of cursive font */
+    font-size: 1.8rem;
+    color: #4B929D;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .franchise-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    max-height: 400px;
+    overflow: hidden;
+  }
+  
+  .franchise-application {
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 600px;
+    max-height: 300px;
+    overflow: auto;
+  }
+  
+  .franchise-application h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .franchise-link {
+    color: #4B929D;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .franchise-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Images Section */
+  .image-section {
+    margin-top: 3rem;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-image {
+    max-width: 45%; /* Make sure the images aren't too big */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .image-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service-image {
+      max-width: 80%; /* Adjust image width on smaller screens */
+    }
+  }
+  
+  /* Clean version for the franchise section without container */
+  .franchise-title {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .franchise-desc {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .franchise-link {
+    color: #4B929D;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+  
+  .franchise-link:hover {
+    text-decoration: underline;
+  }
+  

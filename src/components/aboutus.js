@@ -1,7 +1,14 @@
 import React from 'react';
 import './aboutus.css';
+import image1 from '../aboutuspics/A1.jpg';
+import image2 from '../aboutuspics/A3.jpg';
+import image3 from '../aboutuspics/A2.jpg';
+import image4 from '../aboutuspics/A5.jpg';
+import image5 from '../aboutuspics/A4.jpg';
 
 const About = () => {
+  const images = [image1, image2, image3, image4, image5, image1, image2, image3, image4, image5];
+
   return (
     <section className="about-section">
       <div className="about-container">
@@ -40,6 +47,18 @@ const About = () => {
               <strong>Join Our Story.</strong> Bleu Bean Cafe is not only a coffee shop, it is a community. We want you to be a part of our stories, to make memories, and to enjoy the simple pleasures of a well-crafted beverage. At Bleu Bean Cafe, we turn blue moments into warm memories. Step into Bleu Bean Cafe and leave the world behind, one cup at a time.
             </p>
           </div>
+        </div>
+
+        {/* Carousel Section */}
+        <div className="carousel-images">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Bleu Bean ${index + 1}`}
+              className="carousel-image"
+            />
+          ))}
         </div>
       </div>
     </section>
