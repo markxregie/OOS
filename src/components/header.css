@@ -8,12 +8,23 @@
 }
 
 /* Navbar Styling */
+/* Navbar Styling */
 .navbar {
   background-color: #fffefe !important;
   padding: 0.5rem 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add this line */
-  
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Make sure it stays at the top */
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
+
+/* Add a margin to the body to avoid content being hidden under the navbar */
+body {
+  margin-top: 70px; /* Adjust this value according to the height of your navbar */
+}
+
 
 /* Navbar Brand Image */
 .navbar-brand {
