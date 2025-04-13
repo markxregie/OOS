@@ -7,7 +7,8 @@ import Signup from './components/signup';
 import ForgotPassword from './components/forgotpassword'; 
 import Menu from './components/menulanding';
 import About from './components/aboutus';  
-import Services from './components/services';  
+import Services from './components/services'; 
+import Menus from './components/menu';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function App() {
@@ -38,6 +39,7 @@ function MainApp() {
               <Services />  
             </>
           } />
+          <Route path="/menu" element={<Menus />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

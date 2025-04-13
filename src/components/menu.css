@@ -1,0 +1,71 @@
+.coffee-message-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    text-align: center;
+    padding: 2rem 2rem 6rem; /* Extra padding at bottom for cloud */
+    background-color: #A3D3D8;
+    position: relative;
+    overflow: visible; /* Changed to visible */
+  }
+  
+  .text-content {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .main-heading {
+    font-size: 5rem;
+    color: #4B929D;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .sub-text {
+    font-size: 1.2rem;
+    color: #EBF5F6;
+    font-weight: 600;
+  }
+  
+  .cloud-img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateY(10%); /* Adjust this to fine-tune position */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 3.5rem;
+    }
+    
+    .sub-text {
+      font-size: 1.2rem;
+    }
+  
+    .coffee-message-section {
+      padding-bottom: 5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-heading {
+      font-size: 2.5rem;
+    }
+    
+    .sub-text {
+      font-size: 1rem;
+    }
+  
+    .coffee-message-section {
+      padding-bottom: 4rem;
+    }
+  }
