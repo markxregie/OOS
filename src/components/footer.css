@@ -1,0 +1,29 @@
+/* footer.css */
+.footer-custom {
+    background-color: #4B929D !important;
+  }
+  
+  .text-custom {
+    color: #EBF5F6 !important;
+  }
+  
+  .social-icons a {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+    color: #ffffff !important;
+  }
+  
+  .logo-container {
+    padding: 8px;
+  }
+  
+  .logo-container img {
+    max-width: 200%;
+    height: auto;
+    object-fit: contain;
+  }

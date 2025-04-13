@@ -9,6 +9,7 @@ import Menu from './components/menulanding';
 import About from './components/aboutus';  
 import Services from './components/services'; 
 import Menus from './components/menu';
+import Footer from './components/footer';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function App() {
@@ -21,10 +22,12 @@ function App() {
 
 function MainApp() {
   const location = useLocation();
+  const hideHeaderFooterPaths = ['/login', '/signup', '/forgot-password'];
+  const shouldHideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname);
   
   return (
     <div className='App'>
-      {location.pathname !== '/login' && location.pathname !== '/signup' && location.pathname !== '/forgot-password' && (
+      {!shouldHideHeaderFooter && (
         <header id='header'>
           <AppHeader />
         </header>
@@ -45,6 +48,7 @@ function MainApp() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </main>
+      {!shouldHideHeaderFooter && <Footer />} {/* Add Footer here */}
     </div>
   );
 }  
