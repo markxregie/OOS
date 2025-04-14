@@ -10,6 +10,7 @@ import About from './components/aboutus';
 import Services from './components/services'; 
 import Menus from './components/menu';
 import Footer from './components/footer';
+import Cart from './components/cart';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 function App() {
@@ -43,6 +44,7 @@ function MainApp() {
             </>
           } />
           <Route path="/menu" element={<Menus />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

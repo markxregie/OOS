@@ -36,7 +36,7 @@ export default function AppHeader() {
 
             {/* Right - Cart and Buttons */}
             <div className="d-flex align-items-center cart-and-buttons">
-              <Nav.Link href="#cart" className="me-3">
+              <Nav.Link href="/cart" className="me-3">
                 <img src={cartIcon} alt="Cart" className="cart-img" />
               </Nav.Link>
               <Nav.Link as={Link} to="/login">
