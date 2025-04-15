@@ -38,7 +38,7 @@
     bottom: 0;
     z-index: 1;
     pointer-events: none;
-    transform: translateY(10%); /* Adjust this to fine-tune position */
+    transform: translateY(8%); /* Adjust this to fine-tune position */
   }
   
   /* Responsive adjustments */
