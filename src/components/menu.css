@@ -242,6 +242,8 @@
   color: #444;
   font-weight: 500;
 }
+
+
 /* Modal Styles */
 .modal-image-placeholder {
   height: 300px;
@@ -283,11 +285,13 @@
   padding: 0.375rem 0.75rem;
 }
 
+
 .btn-group-toggle .btn-outline-secondary.active {
   background-color: #4b929d;
   color: white;
   border-color: #4b929d;
 }
+
 
 /* Checkbox Styles */
 .form-check {
@@ -308,6 +312,7 @@
 .btn-outline-primary:hover {
   background-color: #4b929d;
   color: white;
+  
 }
 
 .btn-primary {
@@ -317,7 +322,7 @@
 
 .btn-primary:hover {
   background-color: #3a7a84;
-  border-color: #3a7a84;
+  border-color: #3a7a84 !important;
 }
 
 

@@ -10,7 +10,8 @@ const About = () => {
   const images = [image1, image2, image3, image4, image5, image1, image2, image3, image4, image5];
 
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
+
       <div className="about-container">
         <h2 className="about-header">About Us</h2>
         

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import './menu.css';
 
 const menuData = {
@@ -40,6 +43,14 @@ const menuData = {
       setSelectedItem(itemName);
       setShowModal(true);
     };
+    const handleAddToCart = () => {
+      toast.success(`${selectedItem} added to cart!`);
+    };
+    
+    const handleBuyNow = () => {
+      toast.info(`Buying ${selectedItem} now!`);
+    };
+    
   
     const handleClose = () => setShowModal(false);
   
@@ -321,15 +332,16 @@ const menuData = {
       Close
     </Button>
     <div>
-      <Button variant="outline-primary" className="me-2">
-        Add to cart
-      </Button>
-      <Button variant="primary">
-        Buy Now
-      </Button>
+    <Button variant="outline-primary" className="me-2" onClick={handleAddToCart}>
+      Add to cart
+    </Button>
+    <Button variant="primary" onClick={handleBuyNow}>
+      Buy Now
+    </Button>
     </div>
   </Modal.Footer>
 </Modal>
+<ToastContainer position="top-center" autoClose={2000} hideProgressBar />
       </div>
     </section>
   );

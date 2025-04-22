@@ -7,7 +7,7 @@ import wave from '../assets/Wave.svg';
 
 const Home = () => {
   return (
-    <section className="home-section">
+    <section className="home-section" id="home">
       <div className="home-content">
         <div className="home-text">
           <h1>
@@ -15,8 +15,8 @@ const Home = () => {
           </h1>
           <p>It's Time To Take Your Coffee</p>
           <button className="order-btn">
-  Order Now! <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
-</button>
+              Order Now! <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
+            </button>
 
         </div>
         <div className="home-image">

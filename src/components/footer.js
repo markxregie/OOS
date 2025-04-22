@@ -42,24 +42,26 @@ const Footer = () => {
 
               {/* Contact Column */}
               <Col md={4} className="mb-3 mb-md-0">
-                <h5 className="mb-3 text-custom">Contact</h5>
-                <p className="mb-1 text-custom">
+                <h5 className="mb-3 text-custom text-start">Contact</h5>
+                <p className="mb-1 text-custom text-start">
                   <i className="bi bi-geo-alt-fill me-2"></i> 123 Cafe Street
                 </p>
-                <p className="mb-1 text-custom">
+                <p className="mb-1 text-custom text-start">
                   <i className="bi bi-telephone-fill me-2"></i> (123) 456-7890
                 </p>
-                <p className="mb-0 text-custom">
+                <p className="mb-0 text-custom text-start">
                   <i className="bi bi-envelope-fill me-2"></i> info@bleubeancafe.com
                 </p>
               </Col>
 
+
               {/* Hours Column */}
               <Col md={4}>
-                <h5 className="mb-3 text-custom">Hours</h5>
-                <p className="mb-1 text-custom">Mon-Fri: 7am - 9pm</p>
-                <p className="mb-1 text-custom">Sat-Sun: 8am - 10pm</p>
+                <h5 className="mb-3 text-custom text-start">Hours</h5>
+                <p className="mb-1 text-custom text-start">Mon-Fri: 7am - 9pm</p>
+                <p className="mb-1 text-custom text-start">Sat-Sun: 8am - 10pm</p>
               </Col>
+
             </Row>
           </Col>
         </Row>

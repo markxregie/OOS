@@ -26,6 +26,7 @@ function MainApp() {
   const hideHeaderFooterPaths = ['/login', '/signup', '/forgot-password'];
   const shouldHideHeaderFooter = hideHeaderFooterPaths.includes(location.pathname);
   
+  
   return (
     <div className='App'>
       {!shouldHideHeaderFooter && (

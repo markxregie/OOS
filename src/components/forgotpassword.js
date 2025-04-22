@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from '../assets/logo.jpg';
 import homeImage from '../assets/coffee.jpg';
 import { Eye, EyeOff } from 'lucide-react';
 import './forgotpassword.css';
 
 const Forgotpassword = () => {
-  const [fullName, setFullName] = useState('');
-  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -16,27 +16,26 @@ const Forgotpassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      alert('Passwords do not match!');
+      toast.error('Passwords do not match!');
     } else {
-      console.log({ fullName, phone, email, password });
-      // Add the signup logic here
+      toast.success('Password successfully reset!');
+      console.log({ email, password });
+      // Add the reset logic here
     }
   };
 
   return (
     <div className="login-container">
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
       <div className="login-box">
         <div className="login-form">
           <div className="logo-wrapper">
             <img src={logo} alt="Logo" className="circle-logo" />
           </div>
           <h2>Reset Password</h2>
-          <p>Confirm your new 
-          password to continue.</p>
+          <p>Confirm your new password to continue.</p>
 
           <form onSubmit={handleSubmit}>
-            
-
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -93,9 +92,8 @@ const Forgotpassword = () => {
           </form>
 
           <div className="signup-link">
-          Access your account? Go back to <a href="/login">Log in</a>
+            Access your account? Go back to <a href="/login">Log in</a>
           </div>
-
         </div>
 
         <div

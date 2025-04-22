@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import qrImage from '../assets/qr.png';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './cart.css';
 
 const Cart = () => {
@@ -105,10 +106,18 @@ const Cart = () => {
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
+      toast.error('Please fill in all required fields correctly.');
+    } else if (!receiptFile) {
+      toast.error('Please upload a payment receipt.');
     } else {
       setErrors({});
-      alert('Checkout successful!');
+      toast.success('Checkout successful!');
+      // Optional: Clear form and cart
+      setFormData({ name: '', address: '', landmark: '', contact: '', email: '' });
+      setReceiptFile(null);
+      setCartItems([]);
     }
+    
   };
 
 
@@ -311,6 +320,8 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar={false} />
+
     </section>
   );
 };
