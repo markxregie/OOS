@@ -123,7 +123,7 @@ const Cart = () => {
 
 
   return (
-    <section className="container-fluid py-4 px-5 mt-2 pt-5" style={{ backgroundColor: '#eaf4f6', minHeight: '100vh' }}>
+    <section className="container-fluid py-3 px-5 mt-5 pt-5" style={{ backgroundColor: '#eaf4f6', minHeight: '100vh' }}>
       <div className="row">
         {/* Cart Section */}
         <div className="col-lg-8 mb-4">
