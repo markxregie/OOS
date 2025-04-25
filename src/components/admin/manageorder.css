@@ -1,0 +1,5 @@
+.order-margin {
+    padding-right: 30px;  /* Adjust padding instead of margin */
+    display: flex;
+    justify-content: flex-end;
+  }

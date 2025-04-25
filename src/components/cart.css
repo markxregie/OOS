@@ -2,3 +2,8 @@
 .container-fluid{
   margin-top: 5rem !important;
 }
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+
+}

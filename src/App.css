@@ -2,6 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
 .App {
   display: flex;
   flex-direction: column;
@@ -15,6 +18,8 @@ body {
   background-color: #EBF5F6 !important;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  margin: 20px; /* <-- remove or set to 0 */
+  padding-top: 60px; /* <-- this is often used for fixed navbars */
 }
 .App-logo {
   height: 40vmin;
