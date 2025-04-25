@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";  // Import Link from react-router-dom
+import { Link, useLocation } from "react-router-dom";  // Import useLocation to track the active route
 import logo from "../../assets/logo.jpg";
 import { 
   HouseDoorFill, 
@@ -10,6 +10,14 @@ import {
 } from "react-bootstrap-icons";
 
 const Sidebar = () => {
+  const [activeKey, setActiveKey] = useState("/admin/dashboard"); // Default active link
+  const location = useLocation(); // Get current route location
+
+  // Update active key based on the current route
+  React.useEffect(() => {
+    setActiveKey(location.pathname);
+  }, [location]);
+
   return (
     <div
       style={{ 
@@ -40,10 +48,10 @@ const Sidebar = () => {
           <small className="text-muted">Admin</small>
         </div>
         
-        <Nav defaultActiveKey="/dashboard" className="flex-column">
+        <Nav activeKey={activeKey} onSelect={(selectedKey) => setActiveKey(selectedKey)} className="flex-column">
           <Nav.Link 
-            as={Link}  // Use Link instead of href
-            to="/admin/dashboard"  // Navigate to dashboard
+            as={Link} 
+            to="/admin/dashboard" 
             className="d-flex align-items-center py-3"
             style={{ color: "#5caab3", borderRadius: "8px" }}
           >
@@ -51,8 +59,8 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </Nav.Link>
           <Nav.Link 
-            as={Link}  // Use Link instead of href
-            to="/admin/manageorders"  // Navigate to Manage Orders page
+            as={Link} 
+            to="/admin/manageorders" 
             className="d-flex align-items-center py-3 text-dark"
             style={{ borderRadius: "8px" }}
           >
@@ -60,8 +68,8 @@ const Sidebar = () => {
             <span>Manage Orders</span>
           </Nav.Link>
           <Nav.Link 
-            as={Link}  // Use Link instead of href
-            to="/admin/inbox"  // You can set up an Inbox page later
+            as={Link} 
+            to="/admin/inbox" 
             className="d-flex align-items-center py-3 text-dark"
             style={{ borderRadius: "8px" }}
           >

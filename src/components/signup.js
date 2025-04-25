@@ -4,6 +4,7 @@ import homeImage from '../assets/coffee.jpg';
 import { Eye, EyeOff } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './signup.css'
 
 const Signup = () => {
   const [fullName, setFullName] = useState('');
