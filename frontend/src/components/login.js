@@ -3,7 +3,7 @@ import logo from '../assets/logo.jpg';
 import homeImage from '../assets/coffee.jpg';
 import { Eye, EyeOff } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // import toast styles
+import 'react-toastify/dist/ReactToastify.css'; // Toast styles
 import './login.css';
 
 const LoginPage = () => {
@@ -12,22 +12,44 @@ const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (username && password) {
-      toast.success('Login successful!', {
-        position: 'top-right',
-        autoClose: 3000,
-      });
-    } else {
-      toast.error('Please fill in all fields', {
-        position: 'top-right',
-        autoClose: 3000,
-      });
+    if (!username || !password) {
+      toast.error('Please fill in all fields', { position: 'top-right', autoClose: 3000 });
+      return;
     }
 
-    console.log({ username, password, rememberMe });
+    try {
+      const response = await fetch('http://localhost:8000/token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          username,
+          password,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Invalid credentials');
+      }
+
+      const data = await response.json();
+      toast.success('Login successful!', { position: 'top-right', autoClose: 2000 });
+
+      // Store token in localStorage
+      localStorage.setItem('token', data.access_token);
+
+      // Redirect after short delay
+      setTimeout(() => {
+        window.location.href = '/menu'; // Replace with your route
+      }, 2000);
+
+    } catch (error) {
+      toast.error(error.message, { position: 'top-right', autoClose: 3000 });
+    }
   };
 
   return (
@@ -75,7 +97,7 @@ const LoginPage = () => {
             </div>
 
             <div className="forgot-password">
-              <a href="/forgot-password"></a>
+              <a href="/forgot-password">Forgot password?</a>
             </div>
 
             <button type="submit" className="login-button">Log In</button>
